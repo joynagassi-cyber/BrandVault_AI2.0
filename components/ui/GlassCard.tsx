@@ -25,13 +25,15 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       backdrop-blur-md 
       border border-white/10
       rounded-2xl 
-      transition-all duration-300
+      transition-all duration-500 ease-out
       overflow-hidden
+      hover:-translate-y-2
+      hover:bg-background-secondary/60
       ${glows[glowColor]}
       ${className}
     `}>
       {/* Subtle Gradient Overlay on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       
       {/* Content */}
       <div className="relative z-10 h-full">
